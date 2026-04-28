@@ -1,5 +1,6 @@
 import { Button, Card, Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { MdOutlineFileDownload } from 'react-icons/md';
@@ -25,7 +26,9 @@ const PhotosCard = ({photo}) => {
                          <p className={'text-lg flex justify-between items-center gap-1'}><FaHeart />{photo.likes}</p>
                          <p className={'text-lg flex justify-between items-center gap-1'}><MdOutlineFileDownload />{photo.downloads}</p>
                     </div>
+                   <Link href={`/all-photo/${photo.id}`}>
                     <Button variant='outline' className={'w-full'}>View</Button>
+                   </Link>
                 </div>
             </Card>
         </div>
