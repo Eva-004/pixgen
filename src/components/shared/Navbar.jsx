@@ -54,7 +54,7 @@ const Navbar = () => {
           {
             user && <div className='flex justify-between gap-4 items-center'>
               <Avatar>
-                <Avatar.Image alt={user?.name} src={user?.image} referrerPolicy='no-referrer' />
+                <Avatar.Image alt={user?.name} src={user?.image} referrerPolicy='no-referrer' className='w-full object-cover'/>
                 <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
               <Button onClick={handleSignOut} size='sm'>Logout</Button>
